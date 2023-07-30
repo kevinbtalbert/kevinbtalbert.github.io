@@ -10,7 +10,9 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
+## TO SERVE LOCALLY: bundle exec jekyll serve
+
+theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "air" #"default", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
@@ -22,10 +24,10 @@ subtitle                 : "A Caffeinated Look at Innovation" # site tagline tha
 name                     : "Kevin Talbert"
 description              : "A Caffeinated Look at Innovation"
 url                      : "https://kevinbtalbert.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+#baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "kevinbtalbert/kevinbtalbert.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/favicon.png" # path of logo image to display in the masthead, e.g. "/assets/images/favicon.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -106,7 +108,7 @@ analytics:
 author:
   name             : "Kevin Talbert"
   avatar           : "/assets/images/bio-photo.JPG"
-  bio              : "Kevin Talbert is a seasoned big data architect and solutions engineer, with a commended track record in creating cutting-edge solutions. Leveraging his expertise and passion, he continues to shape the landscape of data-driven technologies, empowering businesses to thrive in the digital age."
+  bio              : "Kevin Talbert is a seasoned big data architect and solutions engineer, with a knack for creating cutting-edge solutions. Leveraging his expertise and passion, he continues to shape the landscape of data-driven technologies, empowering businesses to thrive in the digital age."
   location         : "Charlotte, North Carolina"
   email            : "ktalbert@cloudera.com"
   links:

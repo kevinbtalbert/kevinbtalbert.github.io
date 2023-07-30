@@ -1,6 +1,8 @@
 ---
 title: "Post: Standard"
 excerpt_separator: "<!--more-->"
+page: "First Post"
+permalink: "/2023-07-30-first-post"
 categories:
   - Post Formats
 tags:
