@@ -123,9 +123,9 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-square"
+      url: "https://www.linkedin.com/in/talbertkevin/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
