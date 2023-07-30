@@ -12,8 +12,8 @@
 
 ## TO SERVE LOCALLY: bundle exec jekyll serve
 
-theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
+#theme                  : "minimal-mistakes-jekyll"
+remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "air" #"default", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
