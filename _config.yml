@@ -105,10 +105,10 @@ analytics:
 # Site Author
 author:
   name             : "Kevin Talbert"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-photo.png"
   bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  location         : "Charlotte, North Carolina"
+  email            : "ktalbert@cloudera.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -118,7 +118,7 @@ author:
       # url: "https://kevinbtalbert.github.io"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/kevinbtalbert"
+      url: "https://github.com/kevinbtalbert"
 
 # Site Footer
 footer:
