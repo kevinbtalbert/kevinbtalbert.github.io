@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Kevin Talbert"
-  avatar           : "/assets/images/bio-photo.png"
+  avatar           : "/assets/images/bio-photo.JPG"
   bio              : "Kevin Talbert is a seasoned big data architect and solutions engineer, with a commended track record in creating cutting-edge solutions. Leveraging his expertise and passion, he continues to shape the landscape of data-driven technologies, empowering businesses to thrive in the digital age."
   location         : "Charlotte, North Carolina"
   email            : "ktalbert@cloudera.com"
