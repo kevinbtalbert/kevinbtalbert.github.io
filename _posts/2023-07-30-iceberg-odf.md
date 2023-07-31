@@ -1,5 +1,5 @@
 ---
-# layout: single
+layout: single
 title: "Leveraging Iceberg as an Open Data Lake Format"
 header:
   teaser: "unsplash-gallery-image-2-th.jpg"

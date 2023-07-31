@@ -21,7 +21,14 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-gist", "~> 1.5"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.1"
   spec.add_runtime_dependency "jekyll-include-cache", "~> 0.1"
+  spec.add_runtime_dependency "jekyll-archives", "~> 2.0"
+  spec.add_runtime_dependency "kramdown-parser-gfm"
 
   spec.add_development_dependency "bundler"
-  spec.add_development_dependency "rake", ">= 12.3.3"
+  spec.add_development_dependency "minitest"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rdoc"
+  spec.add_development_dependency "rubocop-jekyll", "~> 0.9"
+  spec.add_development_dependency "shoulda"
+  spec.add_development_dependency "webrick"
 end
