@@ -3,7 +3,7 @@ layout: single
 title: "Adopting an Open Data Lakehouse with NiFi"
 header:
   teaser: "unsplash-gallery-image-2-th.jpg"
-date:   2023-08-14 05:00:00 +0000
+date:   2023-08-13 22:00:00 +0000
 categories: iceberg nifi
 tags: nifi iceberg data flow apache cloudera
 
