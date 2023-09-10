@@ -25,18 +25,18 @@ In general, this is the architectural idea behind an implementation of this conc
 ![](/assets/posts/2023-09-10-ai-workflows/ex_architecture1.png)
 [*View Larger*](/assets/posts/2023-09-10-ai-workflows/ex_architecture1.png)
 
-*1 - https://github.com/kevinbtalbert/openai-chatbot*
+*1 - [https://github.com/kevinbtalbert/openai-chatbot](https://github.com/kevinbtalbert/openai-chatbot)*
 
-*2/3 - https://github.com/kevinbtalbert/build_kb_tools*
+*2/3 - [https://github.com/kevinbtalbert/build_kb_tools](https://github.com/kevinbtalbert/build_kb_tools)*
 
-*6 - https://platform.openai.com/account/api-keys*
+*6 - [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)*
 
 
 ## Extending OpenAI API Use Cases
 
 Even though the internal knowledge base is a great use case, there are several other engines available more fine tuned to specific tasks. Like the example earlier I provided around code checking, OpenAI provides a fine-tuned engine for code verification/creation/completion as well. OpenAI has created an API for users to take advantage of their semantic search engine (and also one for training) that can literally be setup in less than 100 lines of code. I think the cool thing about adopting this API into your workflow is that you can amortize its benefits to so many more use cases than just a chatbot. Effectively anywhere you can access the internet, you can leverage the OpenAI python library to transmit/receive insights from your data. You can check out their PyPi library, and install it via pip: [openai 0.28.0](https://pypi.org/project/openai/).
 
-To get you started, consider the following starter code I wrote which can be extended to more broadly support complex use cases. Note that to access the OpenAI API, you will need to create an OpenAI key: https://platform.openai.com/account/api-keys
+To get you started, consider the following starter code I wrote which can be extended to more broadly support complex use cases. Note that to access the OpenAI API, you will need to create an OpenAI key: [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys).
 
 ```python 
 #shell: !pip install openai
