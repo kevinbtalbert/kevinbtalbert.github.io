@@ -3,7 +3,7 @@ layout: single
 title: "Leveraging OpenAI for your Workflows"
 header:
   teaser: "unsplash-gallery-image-2-th.jpg"
-date:   2023-08-25 12:00:00 +0000
+date:   2023-09-10 12:00:00 +0000
 categories: ml
 tags: openai data cml ai cloudera
 
@@ -18,8 +18,12 @@ As is the theme with this blog, I am all about providing easy solutions that you
 
 ## Use Case: Internal Knowledge Base
 
-For my own part, this AMP was bourne out of the notion that we need an internal knowledge base with context of data scraped after September 2021, which is the latest set of data OpenAI's ChatGPT provides. Building an internal knowledge base may be driven by many factors, but for me the first (and most obvious) source would be our public documentation. All the current pages on a website can typically be associated with a sitemap xml file. Using the tools I wrote [here (Scripts/Utilities to Build a Knowledge Base)](https://github.com/kevinbtalbert/build_kb_tools), you can build your internal knowledge base from a sitemap and use the created files to power your internal knowledge base app with some tweaking to the [OpenAI Chatbot Leveraging GPT 3.5 and GPT 4](https://github.com/kevinbtalbert/openai-chatbot) project.
+For my own part, this AMP was bourne out of the notion that we need an internal knowledge base with context of data scraped after September 2021, which is the latest set of data OpenAI's ChatGPT provides. Building an internal knowledge base may be driven by many factors, but for me the first (and most obvious) source would be our public documentation. All the current pages on a website can typically be associated with a sitemap xml file. Using the tools I wrote [here (Scripts/Utilities to Build a Knowledge Base)](https://github.com/kevinbtalbert/build_kb_tools), you can build your internal knowledge base from a sitemap and use the created files to power your internal knowledge base app with some tweaking to the [OpenAI Chatbot Leveraging GPT 3.5 and GPT 4](https://github.com/kevinbtalbert/openai-chatbot) project. 
 
+In general, this is the architectural idea behind an implementation of this concept:
+
+![](/assets/posts/2023-09-10-ai-workflows/ex_architecture1.png)
+[*View Larger*](/assets/posts/2023-09-10-ai-workflows/ex_architecture1.png)
 
 ## Extending OpenAI API Use Cases
 
@@ -69,7 +73,14 @@ While this example is very simple, it demonstrates the API's capabilities to dri
 
 ## Use Case: Code Explainability
 
-Perhaps even cooler is the [Codex model series](https://platform.openai.com/docs/guides/code), provided by OpenAI which could enable you to bring data analyst insights to non-technical users: [Codex Model Overview](https://platform.openai.com/docs/models/codex). As an example of this use case, since users of the CML platform already have their data stored in Cloudera's Data Platform, they can call `DESCRIBE <table>;` on one of the tables in their database and feed this as context to the OpenAI model, asking it to generate a SQL query to run for more advanced insights in CDW (Cloudera Data Warehouse). These connections are very simple to make and the UI provides [sample code](/assets/posts/2023-09-10-ai-workflows/sample_code.png) for you to build from. The capabilities are really endless here, and with the inbuilt connections that CML provides, you could have this use case up and running in under an hour. You can ask questions of your dataset and have the engine build a SQL query that answers it. You can even feed the answer directly back into your SQL engine. Check out the example implementation of this below:
+Perhaps even cooler is the [Codex model series](https://platform.openai.com/docs/guides/code), provided by OpenAI which could enable you to bring data analyst insights to non-technical users: [Codex Model Overview](https://platform.openai.com/docs/models/codex). As an example of this use case, since users of the CML platform already have their data stored in Cloudera's Data Platform, they can call `DESCRIBE <table>;` on one of the tables in their database and feed this as context to the OpenAI model, asking it to generate a SQL query to run for more advanced insights in CDW (Cloudera Data Warehouse). These connections are very simple to make and the UI provides [sample code](/assets/posts/2023-09-10-ai-workflows/sample_code.png) for you to build from. The capabilities are really endless here, and with the inbuilt connections that CML provides, you could have this use case up and running in under an hour. You can ask questions of your dataset and have the engine build a SQL query that answers it. You can even feed the answer directly back into your SQL engine. 
+
+In general, this is the architecture you are implementing; however, you would likely adapt this to include some kind of UI (like Gradio, Flask, Nginx, etc.) to do this at scale. I could also see this being done as a layer to form visualizations from their SQL core.
+
+![](/assets/posts/2023-09-10-ai-workflows/ex_architecture2.png)
+[*View Larger*](/assets/posts/2023-09-10-ai-workflows/ex_architecture2.png)
+
+Check out the example implementation of this below:
 
 ```python
 #shell: !pip install openai
