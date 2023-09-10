@@ -4,8 +4,8 @@ title: "Leveraging OpenAI for your Workflows"
 header:
   teaser: "unsplash-gallery-image-2-th.jpg"
 date:   2023-08-25 12:00:00 +0000
-categories: ai
-tags: openai data cml cde cloudera
+categories: ml
+tags: openai data cml ai cloudera
 
 ---
 *The article discusses the rising importance of AI in modernizing business workflows across various sectors, including finance and government. It specifically focuses on use cases for adopting AI through tools like Cloudera's CML platform to offer valuable insights quickly and at a low cost. The article provides Python code samples for these applications, emphasizing how easy it is to set up OpenAI API with just a few lines of code.*
