@@ -26,8 +26,11 @@ In general, this is the architectural idea behind an implementation of this conc
 [*View Larger*](/assets/posts/2023-09-10-ai-workflows/ex_architecture1.png)
 
 *1 - https://github.com/kevinbtalbert/openai-chatbot*
+
 *2/3 - https://github.com/kevinbtalbert/build_kb_tools*
+
 *6 - https://platform.openai.com/account/api-keys*
+
 
 ## Extending OpenAI API Use Cases
 
