@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
 ```
 
-[Full Code of this simple OpenAI Implementation here](/assets/posts/2023-09-10-ai-workflows/simple_open_ai_implementation.py)
+[Full Code of this simple OpenAI Implementation here](https://raw.githubusercontent.com/kevinbtalbert/kevinbtalbert.github.io/main/assets/posts/2023-09-10-ai-workflows/simple_open_ai_implementation.py)
 
 While this example is very simple, it demonstrates the API's capabilities to drive meaningful insights quickly, easily, and with very minimal cost to your organization. Most queries will cost less than a cent to run and are very accurate against the provided context. If you take advantage of the AMPs I mentioned previously, CML takes care of vectorizing your "context" that you provide in the form of text files, picking the file closest to your query as context to send to OpenAI's semantic search API.
 
@@ -122,7 +122,7 @@ if __name__ == "__main__":
 
 ```
 
-[Full Code of this SQL OpenAI Implementation here](/assets/posts/2023-09-10-ai-workflows/sql_open_ai_implementation.py)
+[Full Code of this SQL OpenAI Implementation here](https://raw.githubusercontent.com/kevinbtalbert/kevinbtalbert.github.io/main/assets/posts/2023-09-10-ai-workflows/sql_open_ai_implementation.py)
 
 
 ## Want to Read More and Get Started?
@@ -136,6 +136,6 @@ The capabilities here are incredible, and I hope you'll take some time to play a
 
 [Knowledge-base Building Blocks, Tools, and Scripts](https://github.com/kevinbtalbert/build_kb_tools)
 
-[Simple OpenAI Workflow](/assets/posts/2023-09-10-ai-workflows/simple_open_ai_implementation.py)
+[Simple OpenAI Workflow](https://raw.githubusercontent.com/kevinbtalbert/kevinbtalbert.github.io/main/assets/posts/2023-09-10-ai-workflows/simple_open_ai_implementation.py)
 
-[SQL-driven OpenAI Workflow](/assets/posts/2023-09-10-ai-workflows/sql_open_ai_implementation.py)
+[SQL-driven OpenAI Workflow](https://raw.githubusercontent.com/kevinbtalbert/kevinbtalbert.github.io/main/assets/posts/2023-09-10-ai-workflows/sql_open_ai_implementation.py)
