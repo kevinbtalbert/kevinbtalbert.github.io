@@ -99,7 +99,7 @@ openai.api_key = "sh-xxxx"
 def get_cdw_table_schema(database, table_name):
     CONNECTION_NAME = "default-impala"
     conn = cmldata.get_connection(CONNECTION_NAME)
-    SQL_QUERY = "DESCIBE " + "`" + str(database) + "`." + table_name + "; "
+    SQL_QUERY = "DESCIBE " + "`" + str(database) + "`." + str(table_name) + "; "
     dataframe = conn.get_pandas_dataframe(SQL_QUERY)
     return dataframe.to_string()
 
