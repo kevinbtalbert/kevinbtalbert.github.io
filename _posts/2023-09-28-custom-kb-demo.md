@@ -25,7 +25,3 @@ If what I discussed in the demo sounds interesting to you, I would encourage you
 [OpenAI-driven Chatbot](https://github.com/kevinbtalbert/openai-chatbot)
 
 [Knowledge-base Building Blocks, Tools, and Scripts](https://github.com/kevinbtalbert/build_kb_tools)
-
-[Simple OpenAI Workflow](https://raw.githubusercontent.com/kevinbtalbert/kevinbtalbert.github.io/main/assets/posts/2023-09-10-ai-workflows/simple_open_ai_implementation.py)
-
-[SQL-driven OpenAI Workflow](https://raw.githubusercontent.com/kevinbtalbert/kevinbtalbert.github.io/main/assets/posts/2023-09-10-ai-workflows/sql_open_ai_implementation.py)
