@@ -3,7 +3,7 @@ layout: single
 title: "Demo: CDF, CML, and OpenAI for Custom Chatbots"
 header:
   teaser: "unsplash-gallery-image-2-th.jpg"
-date:   2023-09-10 12:00:00 +0000
+date:   2023-09-28 12:00:00 +0000
 categories: ml
 tags: nifi openai data cml ai cloudera
 
@@ -11,7 +11,7 @@ tags: nifi openai data cml ai cloudera
 *This video demonstrates how Cloudera DataFlow (CDF), Cloudera Machine Learning (CML), and OpenAI can be leveraged to build a custom knowledge base that an enterprise can use for enabling individuals to access their own Custom Q and A chatbot. Using CDF, we deploy a Nifi template that accepts a website’s sitemap as parameter of a POST request made from Postman, and outputs the important html content of every page from the website. CML utilizes OpenAI's API to semantic search with the gathered documents and outputs a result based on content from the custom knowledge base.*
 
 
-<video src="https://github.com/kevinbtalbert/kevinbtalbert.github.io/raw/main/assets/posts/2023-09-28-custom-kb-demo.md/NiFi%20%2B%20OpenAI%20LLM%20Demo%20w%20Kevin.mp4"></video>
+https://github.com/kevinbtalbert/kevinbtalbert.github.io/raw/main/assets/posts/2023-09-28-custom-kb-demo.md/NiFi%20%2B%20OpenAI%20LLM%20Demo%20w%20Kevin.mp4
 
 
 ## Want to Read More and Get Started?
