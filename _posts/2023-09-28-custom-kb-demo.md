@@ -10,8 +10,30 @@ tags: nifi openai data cml ai cloudera
 ---
 *This video demonstrates how Cloudera DataFlow (CDF), Cloudera Machine Learning (CML), and OpenAI can be leveraged to build a custom knowledge base that an enterprise can use for enabling individuals to access their own Custom Q and A chatbot. Using CDF, we deploy a Nifi template that accepts a website’s sitemap as parameter of a POST request made from Postman, and outputs the important html content of every page from the website. CML utilizes OpenAI's API to semantic search with the gathered documents and outputs a result based on content from the custom knowledge base.*
 
+<div class="embed-container">
+    <iframe width="640" height="390" 
+    src="https://github.com/kevinbtalbert/kevinbtalbert.github.io/raw/main/assets/posts/2023-09-28-custom-kb-demo.md/NiFi%20%2B%20OpenAI%20LLM%20Demo%20w%20Kevin.mp4" 
+    frameborder="0" allowfullscreen></iframe>
+</div>
+<style>
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
 
-https://github.com/kevinbtalbert/kevinbtalbert.github.io/raw/main/assets/posts/2023-09-28-custom-kb-demo.md/NiFi%20%2B%20OpenAI%20LLM%20Demo%20w%20Kevin.mp4
 
 
 ## Want to Read More and Get Started?
