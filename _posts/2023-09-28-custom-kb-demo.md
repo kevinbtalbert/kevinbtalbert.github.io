@@ -13,10 +13,14 @@ tags: nifi openai data cml ai cloudera
 [<img src="https://github.com/kevinbtalbert/kevinbtalbert.github.io/raw/main/assets/posts/2023-09-28-custom-kb-demo/still.jpg" width="600" height="300"
 />](https://github.com/kevinbtalbert/cfm-cml-openai-demo/assets/32403721/9af4d30b-3b9a-4dbb-84d5-af48f305aa23)
 
+[![Video]
+(https://github.com/kevinbtalbert/kevinbtalbert.github.io/raw/main/assets/posts/2023-09-28-custom-kb-demo/still.jpg)]
+(https://github.com/kevinbtalbert/cfm-cml-openai-demo/assets/32403721/9af4d30b-3b9a-4dbb-84d5-af48f305aa23)
+
 ![](https://github.com/kevinbtalbert/cfm-cml-openai-demo/assets/32403721/9af4d30b-3b9a-4dbb-84d5-af48f305aa23)
 
 ## Want to Read More and Get Started?
-The capabilities here are incredible, and I hope you'll take some time to play around with these use cases. If any of them sound interesting to you, I would encourage you to check out the links below and get hands on. Any of the code that I have written in this article you are welcome to use and build on as you wish!
+If what I discussed in the demo sounds interesting to you, I would encourage you to check out the links below and get hands on. Any of the code that I have written in this article you are welcome to use and build on as you wish!
 
 [CDP Public Cloud 60 Day Trial](https://www.cloudera.com/campaign/try-cdp-public-cloud.html)
 
