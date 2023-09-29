@@ -13,7 +13,7 @@ tags: nifi openai data cml ai cloudera
 [<img src="https://github.com/kevinbtalbert/kevinbtalbert.github.io/raw/main/assets/posts/2023-09-28-custom-kb-demo/still.jpg" width="600" height="300"
 />](https://github.com/kevinbtalbert/cfm-cml-openai-demo/assets/32403721/2d536c28-cc03-4c59-a05d-9ebb911e2a07)
 
-![Link here](https://github.com/kevinbtalbert/cfm-cml-openai-demo/blob/main/README.md)
+[Link here](https://github.com/kevinbtalbert/cfm-cml-openai-demo/blob/main/README.md)
 
 ## Want to Read More and Get Started?
 If what I discussed in the demo sounds interesting to you, I would encourage you to check out the links below and get hands on. Any of the code that I have written in this article you are welcome to use and build on as you wish!
