@@ -8,7 +8,7 @@ categories: ml
 tags: education ml ai cloudera
 
 ---
-*summary here*
+*This article explores the transformative potential of AI in education, highlighting "Khanmigo," a system by Khan Academy that offers personalized guidance to students without giving away answers. I emphasize that machine learning can be integrated into Learning Management Systems (LMS) to offer real-time feedback, intelligent autograding, and predictive analytics that benefit both students and educators. I argue that just as calculators became useful tools in education, AI could be embraced to improve teaching and learning methods, facilitating more interactive and personalized educational experiences.*
 
 ![](/assets/posts/2023-10-13-ml-in-education/thinking-prof.webp)
 
@@ -57,4 +57,4 @@ I distinctly remember a discussion in which a college Calculus professor describ
 ## References and Other Resources
 If what I discussed sounds interesting to you, please be sure to check out the resources below and learn more.
 
-[How AI Could Save (Not Destroy) Education | Sal Khan | TED](https://www.youtube.com/watch?v=hJP5GqnTrNo)
+[How AI Could Save (Not Destroy) Education - Sal Khan - TED](https://www.youtube.com/watch?v=hJP5GqnTrNo)
