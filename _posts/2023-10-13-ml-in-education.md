@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Will AI Actually "Save" Education?"
+title: "Will AI Actually \"Save\" Education?"
 header:
   teaser: "unsplash-gallery-image-2-th.jpg"
 date:   2023-10-13 12:00:00 +0000
