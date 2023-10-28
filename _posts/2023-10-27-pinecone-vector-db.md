@@ -8,21 +8,26 @@ categories: ml
 tags: pinecone ml ai cml cloudera
 
 ---
-*Here I demonstrate using Pinecone as a Vector DB for semantic search.*
+*In this article, I demonstrate using Pinecone as a Vector DB for semantic search. To achieve this, I leverage Jupyter notebooks in CML to simplify demonstrating a production use case in its component parts.*
 
 ![](/assets/posts/2023-10-27-pinecone-vector-db/PineconeVectorDBAndCloudera.png)
 
 ## What problem does Pinecone solve for the ML architecture?
+
 Pinecone's value proposition is in its support for a multitude of machine learning use cases. Its scalable by design-- supporting over a billion vectors and is suitable for LLM specific applications where the embedding space can be vast. It has low-latency searches which is critical for near-real time applications like what a chatbot use case would pose. Even in high-dimensional spaces, Pinecone responds quickly and efficiently. Pinecone supports hybrid search capabilities, high availability and is cost effective considering its managed architecture.
 
 In the context of large language models specifically, I explore below how one can implement Pinecone and the sentence transformers library from Hugging Face to effectively semantic search documents from a user-posed question.
 
 ## Demo of Pinecone as a Vector DB in CML
 
-The entire code base presented below can be viewed in Jupyter notebooks format: https://github.com/kevinbtalbert/Pinecone-For-Semantic-Search-In-CML
+In this Python script, I build a semantic search system for a knowledge base. I aim to convert a corpus of textual documents into vector representations, also known as embeddings, and store them into Pinecone. Once stored, I can easily retrieve the most relevant documents based on user queries.
+
+To achieve this, I utilize the `sentence-transformers/all-mpnet-base-v2` from HuggingFace that understand the context and semantics of sentences. When a user asks a question, I convert it into a similar vector representation and then search for the most closely matching vectors (documents) within Pinecone. The end goal is to quickly and accurately fetch the most relevant document or piece of information from the knowledge base in response to the user's question.
+
+**The entire code base presented below can be viewed in Jupyter notebooks format: https://github.com/kevinbtalbert/Pinecone-For-Semantic-Search-In-CML**
 
 
-1. Download and Install Python Libraries
+**1. Download and Install Python Libraries**
 
 Begin with installing the pip dependencies below from PyPi. The script uses pinecone-client for vector database operations, sentence-transformers to handle sentence embeddings, and torch for tensor operations and neural network functionalities.
 
@@ -32,7 +37,7 @@ Begin with installing the pip dependencies below from PyPi. The script uses pine
 !pip install torch==2.0.1
 ```
 
-2. Import Dependencies
+**2. Import Dependencies**
 
 Import all the necessary modules and functions from the installed libraries.
 
@@ -46,7 +51,7 @@ from transformers import AutoTokenizer, AutoModel
 from sentence_transformers import SentenceTransformer
 ```
 
-3. Initialize environment variables and setup Pinecone
+**3. Initialize environment variables and setup Pinecone**
 
 You will need to create an account with Pinecone at https://app.pinecone.io/?sessionType=signup if you do not already have one. From there, copy over your API key and environment (free one is `gcp-starter`). Also, since I'm declaring variables here, I am going to go ahead and declare I'll be using the sentence transformers model `all-mpnet-base-v2` from hugging face. Ultimately this will be used both for the document embeddings and question embedding. I chose the name `cml-default` as the name for the Pinecone collection (index), however you can choose your own.
 
@@ -69,14 +74,16 @@ print("Successfully loaded " + PINECONE_INDEX)
 
 ```
 
-4. Load the embeddings model
+**4. Load the Embeddings Model**
+
+Load the embedding model `sentence-transformers/all-mpnet-base-v2` from Hugging Face
 
 ```python
 tokenizer = AutoTokenizer.from_pretrained(EMBEDDING_MODEL_REPO)
 model = AutoModel.from_pretrained(EMBEDDING_MODEL_REPO)
 ```
 
-5. Mean Pooling Function
+**5. Mean Pooling Function**
 
 This function performs mean pooling on the model's output to generate sentence embeddings, taking into consideration the attention mask for accurate averaging.
 
@@ -87,7 +94,7 @@ def mean_pooling(model_output, attention_mask):
     return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
 ```
 
-6. Embedding Generation
+**6. Embedding Generation**
 
 This function takes in a sentence and returns its corresponding embedding. It tokenizes the input sentence, computes its embeddings using the pretrained model, and then normalizes the embeddings. Since the default model will trunate the document and only get embeddings of the first 256 tokens, we will need to ensure we pull the full document file later on before returning a response to the user.
 
@@ -112,7 +119,7 @@ def get_embeddings(sentence):
     return (sentence_embeddings.tolist()[0])
 ```
 
-7. Inserting Embeddings into Pinecone Vector Database
+**7. Inserting Embeddings into Pinecone Vector Database**
 
 This segment reads documents from the specified directory (./data), generates embeddings for each document, and inserts the embeddings into the Pinecone vector database. I would recommend spending some time on the upsert function of pinecone. You can add several metadata attributes (I chose to include the file path) which will help you identify or process the data later on. I could imagine use cases where we identify potentially proprietary docs with a tag here, etc.
 
@@ -136,7 +143,7 @@ for file in Path(doc_dir).glob(f'**/*.txt'):
 print('Finished loading Knowledge Base embeddings into Pinecone')
 ```
 
-8. Semantic Search Setup
+**8. Semantic Search Setup**
 
 This final segment sets up the ability to perform semantic search on the Pinecone vector database. Given a user question, the script retrieves the most relevant response from the database and returns the source path, relevancy score, and the actual response.
 
@@ -170,7 +177,7 @@ def load_context_chunk_from_data(id_path):
         return f.read()
 ```
 
-9. Semantic Search!
+**9. Semantic Search!**
 
 Create a question with relevancy to the docs in your `/docs` directory. As you can see, we are provided as a response the content from the most relevant document as well as some metadata such as the original source path of the document and its relevancy score.
 
@@ -183,6 +190,8 @@ print(response)
 ```
 
 As you can see, the Pinecone API has a lot of capabilities. Its full capabilities are documented by Pinecone here: https://docs.pinecone.io/docs/python-client
+
+Once again, all the code above (plus some sample text data) is consolidated in Jupyter Notebook format on my GitHub: https://github.com/kevinbtalbert/Pinecone-For-Semantic-Search-In-CML
 
 
 ## References and Other Resources
