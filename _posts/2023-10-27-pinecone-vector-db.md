@@ -24,7 +24,7 @@ In this Python script, I build a semantic search system for a knowledge base. I 
 
 To achieve this, I utilize the `sentence-transformers/all-mpnet-base-v2` from HuggingFace that understand the context and semantics of sentences. When a user asks a question, I convert it into a similar vector representation and then search for the most closely matching vectors (documents) within Pinecone. The end goal is to quickly and accurately fetch the most relevant document or piece of information from the knowledge base in response to the user's question.
 
-**The entire code base presented below can be viewed in Jupyter notebooks format: https://github.com/kevinbtalbert/Pinecone-For-Semantic-Search-In-CML**
+**The entire code base presented below can be viewed in Jupyter notebooks format: [https://github.com/kevinbtalbert/Pinecone-For-Semantic-Search-In-CML](https://github.com/kevinbtalbert/Pinecone-For-Semantic-Search-In-CML)**
 
 
 **1. Download and Install Python Libraries**
@@ -193,9 +193,9 @@ print("Pinecone relevancy score: " + str(score))
 print(response)
 ```
 
-As you can see, the Pinecone API has a lot of capabilities. Its full capabilities are documented by Pinecone here: https://docs.pinecone.io/docs/python-client
+As you can see, the Pinecone API has a lot of capabilities. Its full capabilities are documented by Pinecone here: [https://docs.pinecone.io/docs/python-client](https://docs.pinecone.io/docs/python-client)
 
-Once again, all the code above (plus some sample text data) is consolidated in Jupyter Notebook format on my GitHub: https://github.com/kevinbtalbert/Pinecone-For-Semantic-Search-In-CML
+Once again, all the code above (plus some sample text data) is consolidated in Jupyter Notebook format on my GitHub: [https://github.com/kevinbtalbert/Pinecone-For-Semantic-Search-In-CML](https://github.com/kevinbtalbert/Pinecone-For-Semantic-Search-In-CML)
 
 
 ## References and Other Resources
@@ -204,6 +204,8 @@ If any of them sound interesting to you, I would encourage you to check out the 
 [CDP Public Cloud 60 Day Trial](https://www.cloudera.com/campaign/try-cdp-public-cloud.html)
 
 [Fully Open Source LLM Chatbot](https://github.com/cloudera/CML_AMP_LLM_Chatbot_Augmented_with_Enterprise_Data)
+
+[Pinecone with Llama2 Implementation](https://github.com/kevinbtalbert/Intelligent-QA-Chatbot-with-NiFi-Pinecone-and-Llama2)
 
 [OpenAI-driven Chatbot](https://github.com/kevinbtalbert/openai-chatbot)
 
