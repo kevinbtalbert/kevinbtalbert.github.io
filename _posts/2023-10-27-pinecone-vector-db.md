@@ -147,6 +147,10 @@ print('Finished loading Knowledge Base embeddings into Pinecone')
 
 This final segment sets up the ability to perform semantic search on the Pinecone vector database. Given a user question, the script retrieves the most relevant response from the database and returns the source path, relevancy score, and the actual response.
 
+Behind the scenes, the function is actually starting by initializing a sentence transformer with the `all-mpnet-base-v2` model and then converting the user's question into an embedding using this transformer. This embedding (`xq` in the code) represents the semantic essence of the question.
+
+*Note that `top_k` is set to 5, indicating 5 documents (embeddings) are retrieved, however I am only printing 1. You can adjust to fit your use case.*
+
 ```python
 ## Setup function to convert user question into an embedding returning most relevant response (semantic search)
 def get_response_from_pinecone_vectordb(index, question):
