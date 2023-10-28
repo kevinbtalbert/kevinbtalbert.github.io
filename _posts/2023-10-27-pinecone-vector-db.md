@@ -76,7 +76,7 @@ print("Successfully loaded " + PINECONE_INDEX)
 
 **4. Load the Embeddings Model**
 
-Load the embedding model `sentence-transformers/all-mpnet-base-v2` from Hugging Face
+Load the embedding model `sentence-transformers/all-mpnet-base-v2` from Hugging Face. The tokenizer is used to convert sentences into tokens. These tokens are essentially smaller chunks or words from the sentence that the model can understand and process. 
 
 ```python
 tokenizer = AutoTokenizer.from_pretrained(EMBEDDING_MODEL_REPO)
@@ -85,7 +85,7 @@ model = AutoModel.from_pretrained(EMBEDDING_MODEL_REPO)
 
 **5. Mean Pooling Function**
 
-This function performs mean pooling on the model's output to generate sentence embeddings, taking into consideration the attention mask for accurate averaging.
+This function performs mean pooling on the model's output to generate sentence embeddings, taking into consideration the attention mask for accurate averaging. Mean pooling is employed as a strategy to convert the embeddings of individual tokens in a sentence into a single vector representation for the entire sentence. The `mean_pooling` function takes the output of the model (which consists of embeddings for every token in the sentence) and an attention mask. This attention mask distinguishes meaningful tokens from padding or other non-informative tokens. During the "pooling process", the function multiplies the token embeddings with the attention mask to ensure only relevant tokens are considered. It then calculates the average of these token embeddings. By doing so, we can then capture the overall semantic essence of the sentence in one compact vector, making it suitable for tasks like semantic search where understanding the broader context of an input is crucial.
 
 ```python
 def mean_pooling(model_output, attention_mask):
